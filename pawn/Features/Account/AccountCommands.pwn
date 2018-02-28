@@ -131,7 +131,6 @@ class AccountCommands {
 
         return 1;
     }
-    @command("pl")
     public OnPlayerCommandText(playerid,cmdtext[])
     {    
         if(!strcmp(cmdtext, "/pl"))
