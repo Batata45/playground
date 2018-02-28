@@ -131,4 +131,15 @@ class AccountCommands {
 
         return 1;
     }
+    @command("pl")
+    public OnPlayerCommandText(playerid,cmdtext[])
+    {    
+        if(!strcmp(cmdtext, "/pl"))
+        {
+            new szString[144];
+            format(szString, sizeof(szString), "Your packet loss is %.2f percent.", NetStats_PacketLossPercent(playerid));
+            SendClientMessage(playerid, -1, szString);
+        }
+        return 1;
+    } 
 };
